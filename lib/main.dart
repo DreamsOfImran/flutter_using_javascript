@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               TextField(
                 controller: myController,
+                autofocus: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Enter your text!',
@@ -65,6 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text('Notify me!'),
                     onPressed: () => {error(myController.text)},
                     color: Colors.redAccent,
+                  ),
+                  RaisedButton(
+                    child: Text('Clear Text'),
+                    onPressed: () => {myController.text = ''},
                   ),
                 ],
               )
